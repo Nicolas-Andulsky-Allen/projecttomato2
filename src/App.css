@@ -67,3 +67,20 @@
     transform: translateX(0%);
     transition: 300ms ease-out;
 }
+
+.getFrosty {
+  background: linear-gradient(
+    to bottom right rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.8rem);
+}
+
+.whiteText {
+  color: white;
+}
+
+.tableColor {
+  color: rgb(180, 170, 156);
+}

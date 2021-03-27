@@ -13,15 +13,19 @@ const HomeComp = () => {
       }}
     >
       <Container fluid={true}>
-        <Row className="foodPicHome">
+        <Row
+          className="tomatoHomeBody"
+          style={{
+            backgroundImage: `url("https://images.unsplash.com/photo-1607430986088-a51ddbc7cc6e?ixid=MXwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDQwfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")`,
+          }}
+        >
           <Col>
             <Media left href="#" classNames="page">
               <Media src="assets/images/cruiseLogo.png" alt="Company Logo" />
             </Media>
           </Col>
-
           <Col>
-            <Media body className="getFrosty">
+            <Media body className="getFrosty whiteText">
               <Media heading>Media heading</Media>
               Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
               scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum

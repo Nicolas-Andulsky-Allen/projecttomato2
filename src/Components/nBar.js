@@ -24,12 +24,13 @@ import {
   faAddressCard,
 } from "@fortawesome/free-solid-svg-icons";
 import "../App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /* THE NAVBAR IS NOT THE JUMBOTRON, THERE NEEDS TO BE A JUMBOTRON */
 const NBar = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
     <div className="NBar">
@@ -42,10 +43,72 @@ const NBar = (props) => {
             alt="NuCamp Logo"
           />
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <NBarLinks />
-          <Nav className="mr-auto" navbar>
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            <div className="collapse navbar-collapse" id="tomatoNavbar">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link" href="/home">
+                    <i>
+                      <FontAwesomeIcon icon={faHome} />
+                    </i>
+                    {"Home"}
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/aboutus">
+                    <i>
+                      <FontAwesomeIcon icon={faInfo} />
+                    </i>
+                    {"About"}
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/ship">
+                    <i>
+                      <FontAwesomeIcon icon={faShip} />
+                    </i>
+                    {"Ship"}
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/itinerary">
+                    <i>
+                      <FontAwesomeIcon icon={faList} />
+                    </i>
+                    {"Itinerary"}
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/testimonials">
+                    <i>
+                      <FontAwesomeIcon icon={faThumbsUp} />
+                    </i>
+                    {"Testimonials"}
+                  </a>
+                </li>
+                <li className="nav-item active">
+                  <a className="nav-link" href="/contact">
+                    <i>
+                      <FontAwesomeIcon icon={faAddressCard} />
+                    </i>
+                    {"Contact"}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </Nav>
+        </Collapse>
+        <NBarSocialLinks />
+      </Navbar>
+    </div>
+  );
+};
+
+export default NBar;
+
+/*          <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="/components/">Components</NavLink>
             </NavItem>
@@ -66,12 +129,4 @@ const NBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
-        <NBarSocialLinks />
-      </Navbar>
-    </div>
-  );
-};
-
-export default NBar;
+          <NavbarText>Simple Text</NavbarText> */

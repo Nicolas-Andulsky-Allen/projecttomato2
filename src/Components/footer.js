@@ -25,12 +25,18 @@ import {
 
 const Footer = (props) => {
   return (
-    <Container className="themed-container" fluid={true}>
+    <Container
+      className="tomatoHomeBody"
+      fluid={true}
+      style={{
+        backgroundImage: `url("https://images.unsplash.com/photo-1502825305473-fedeffa5b12c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80")`,
+      }}
+    >
       <Row>
         <Col>
           {" "}
           We would like to meet you!
-          <Form>
+          <Form className="getFrosty">
             <FormGroup>
               <Label for="firstName">First Name</Label>
               <Input
@@ -95,7 +101,7 @@ const Footer = (props) => {
           </Form>
         </Col>
         <Col>
-          <div>
+          <div className="getFrosty">
             <p>Links</p>
             <Nav vertical>
               <NavItem>

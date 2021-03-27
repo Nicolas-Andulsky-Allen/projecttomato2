@@ -10,8 +10,13 @@ const AboutUs = () => {
         exitTransform: "scale(0.5) translateY(50%)",
       }}
     >
-      <Container fluid={true}>
-        <Row className="foodPicAboutUs">
+      <Container
+        fluid={true}
+        style={{
+          backgroundImage: `url("https://images.unsplash.com/photo-1520066391310-428f06ebd602?ixid=MXwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDI0fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")`,
+        }}
+      >
+        <Row className="whiteText">
           <Col>
             <Media left href="#">
               <Media src="assets/images/cruiseLogo.png" alt="Company Logo" />
